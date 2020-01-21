@@ -1,11 +1,14 @@
 using System;
+using Flunt.Notifications;
+using Flunt.Validations;
 using PaymentContext.Domain.Entities.ValueObjects;
 using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Comamnds;
 
 namespace PaymentContext.Domain.Commands
 {
-    public class CreateBoletoSubscriptionCommand
+    public class CreateBoletoSubscriptionCommand : Notifiable, ICommand
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -28,5 +31,14 @@ namespace PaymentContext.Domain.Commands
         public string State { get; private set; }
         public string Country { get; private set; }
         public string ZipCode { get; private set; }
+
+        //NOT GET TO YOUR DOMAIN INVALID INFORMATIONS RETURN BY DATABASE
+        public void Validate()
+        {
+            AddNotifications(new Contract()
+            .Requires()
+            .HasMinLen(FirstName, 3, "FirstName", "Invalid FirstName, with min characters")
+            .HasMaxLen(FirstName, 40, "FirstName", "Invalid FirstName, with max characters"));
+        }
     }
 }
