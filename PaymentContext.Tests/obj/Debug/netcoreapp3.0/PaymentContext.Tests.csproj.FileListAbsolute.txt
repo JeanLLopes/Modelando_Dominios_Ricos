@@ -94,3 +94,4 @@ C:\Users\Jean\AppData\Local\Temp\Modelando_Domínios_Ricos\PaymentContext.Tests\
 C:\Users\Jean\AppData\Local\Temp\Modelando_Domínios_Ricos\PaymentContext.Tests\obj\Debug\netcoreapp3.0\PaymentContext.Tests.csproj.CopyComplete
 C:\Users\Jean\AppData\Local\Temp\Modelando_Domínios_Ricos\PaymentContext.Tests\obj\Debug\netcoreapp3.0\PaymentContext.Tests.dll
 C:\Users\Jean\AppData\Local\Temp\Modelando_Domínios_Ricos\PaymentContext.Tests\obj\Debug\netcoreapp3.0\PaymentContext.Tests.pdb
+C:\Users\Jean\AppData\Local\Temp\Modelando_Domínios_Ricos\PaymentContext.Tests\bin\Debug\netcoreapp3.0\Flunt.dll

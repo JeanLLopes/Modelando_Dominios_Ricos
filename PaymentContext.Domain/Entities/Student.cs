@@ -48,7 +48,10 @@ namespace PaymentContext.Domain.Entities
                     hasSubscriptionActive = true;
                 }
             }
-            AddNotifications(new Contract().Requires().IsFalse(hasSubscriptionActive, "Subscriptions", "not has active subscription"));
+            AddNotifications(new Contract()
+            .Requires()
+            .IsFalse(hasSubscriptionActive, "Subscriptions", "not has active subscription")
+            .AreEquals(0, subscription.Payments.Count, "Subscription.Payments", "Student not has payments"));
         }
     }
 }

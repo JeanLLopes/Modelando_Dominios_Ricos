@@ -22,7 +22,7 @@ namespace PaymentContext.Domain.Entities
 
             AddNotifications(new Contract()
             .Requires()
-            .IsGreaterThan(0, Total, "Total", "Total not found")
+            .IsLowerOrEqualsThan(0, Total, "Total", "Total not found")
             .IsGreaterOrEqualsThan(Total, TotalPaid, "Total", "Total is invalid"));
         }
 
